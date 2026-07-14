@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Report | THPT Investment Pro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/report.css">
+</head>
+<body>
+<div class="app report-app">
+
+    <header class="report-header">
+        <div>
+            <small>THPT Investment Pro</small>
+            <h1>Daily Report</h1>
+            <p>오늘 필요한 투자 정보만 한 줄씩 정리합니다.</p>
+        </div>
+
+        <button class="report-refresh" type="button" aria-label="리포트 새로고침">
+            ↻
+        </button>
+    </header>
+
+    <main class="report-main">
+
+        <section class="report-hero">
+            <div>
+                <span class="report-date">2026년 7월 14일</span>
+                <h2>오늘은 수익보다<br>현금을 지키는 날입니다.</h2>
+                <p>시장점수 54점 · 안정형 전략 유지</p>
+            </div>
+
+            <div class="report-score">
+                <span>Market</span>
+                <strong>54</strong>
+                <em>관망</em>
+            </div>
+        </section>
+
+        <section class="report-card quick-summary">
+            <div class="report-section-title">
+                <div>
+                    <span>오늘 한눈에</span>
+                    <h2>핵심 요약</h2>
+                </div>
+                <span class="summary-badge">4개 항목</span>
+            </div>
+
+            <ul class="summary-list">
+                <li>
+                    <span class="summary-label">시장</span>
+                    <strong>54점 · 신규매수 자제</strong>
+                </li>
+                <li>
+                    <span class="summary-label">보유</span>
+                    <strong>NAVER 추가매수 대기</strong>
+                </li>
+                <li>
+                    <span class="summary-label">ETF</span>
+                    <strong>오늘 적립 없음</strong>
+                </li>
+                <li>
+                    <span class="summary-label">현금</span>
+                    <strong>276만 원 유지</strong>
+                </li>
+            </ul>
+        </section>
+
+        <section class="report-card">
+            <div class="report-section-title">
+                <div>
+                    <span>오늘 해야 할 일</span>
+                    <h2>행동 체크리스트</h2>
+                </div>
+                <span class="progress-text">1 / 4</span>
+            </div>
+
+            <div class="check-list">
+                <label class="check-item completed">
+                    <input type="checkbox" checked>
+                    <span class="custom-check">✓</span>
+                    <div>
+                        <strong>시장점수 확인</strong>
+                        <p>54점으로 현금 유지 구간입니다.</p>
+                    </div>
+                </label>
+
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span class="custom-check"></span>
+                    <div>
+                        <strong>NAVER 수급 확인</strong>
+                        <p>추가매수 없이 외국인·기관 흐름을 봅니다.</p>
+                    </div>
+                </label>
+
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span class="custom-check"></span>
+                    <div>
+                        <strong>삼성전자 보유 유지</strong>
+                        <p>락업 기간에는 매도 판단을 보류합니다.</p>
+                    </div>
+                </label>
+
+                <label class="check-item">
+                    <input type="checkbox">
+                    <span class="custom-check"></span>
+                    <div>
+                        <strong>미국 일정 확인</strong>
+                        <p>장 마감 전 주요 발표 일정을 재확인합니다.</p>
+                    </div>
+                </label>
+            </div>
+        </section>
+
+        <section class="report-card">
+            <div class="report-section-title">
+                <div>
+                    <span>추천 테마</span>
+                    <h2>오늘의 관심 영역</h2>
+                </div>
+                <button class="text-button" type="button">상세보기</button>
+            </div>
+
+            <div class="theme-grid">
+                <article class="theme-card positive-theme">
+                    <div class="theme-icon">AI</div>
+                    <strong>AI 플랫폼</strong>
+                    <span>긍정</span>
+                </article>
+
+                <article class="theme-card neutral-theme">
+                    <div class="theme-icon">P</div>
+                    <strong>전력 인프라</strong>
+                    <span>관찰</span>
+                </article>
+
+                <article class="theme-card caution-theme">
+                    <div class="theme-icon">B</div>
+                    <strong>반도체</strong>
+                    <span>주의</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="report-card">
+            <div class="report-section-title">
+                <div>
+                    <span>보유 종목 브리핑</span>
+                    <h2>오늘 특이사항</h2>
+                </div>
+                <button class="text-button" type="button">전체보기</button>
+            </div>
+
+            <article class="brief-row">
+                <div class="brief-logo purple-logo">N</div>
+                <div class="brief-content">
+                    <strong>NAVER</strong>
+                    <p>18만 원 지지 여부와 외국인 수급을 확인합니다.</p>
+                </div>
+                <span class="brief-status wait-status">대기</span>
+            </article>
+
+            <article class="brief-row">
+                <div class="brief-logo green-logo">S</div>
+                <div class="brief-content">
+                    <strong>삼성전자</strong>
+                    <p>락업 해제 전까지 비중 조정 계획만 준비합니다.</p>
+                </div>
+                <span class="brief-status hold-status">유지</span>
+            </article>
+
+            <article class="brief-row">
+                <div class="brief-logo mint-logo">E</div>
+                <div class="brief-content">
+                    <strong>미국 S&amp;P500(H)</strong>
+                    <p>오늘은 적립 없이 시장 흐름을 확인합니다.</p>
+                </div>
+                <span class="brief-status observe-status">관찰</span>
+            </article>
+        </section>
+
+        <section class="report-card">
+            <div class="report-section-title">
+                <div>
+                    <span>오늘 주요 일정</span>
+                    <h2>리스크 캘린더</h2>
+                </div>
+                <span class="calendar-badge">2건</span>
+            </div>
+
+            <div class="calendar-item">
+                <div class="calendar-time">
+                    <strong>21:30</strong>
+                    <span>미국</span>
+                </div>
+                <div>
+                    <strong>물가지표 발표</strong>
+                    <p>예상치 이탈 시 기술주 변동성이 커질 수 있습니다.</p>
+                </div>
+                <span class="risk-chip high-risk">중요</span>
+            </div>
+
+            <div class="calendar-item">
+                <div class="calendar-time">
+                    <strong>장중</strong>
+                    <span>한국</span>
+                </div>
+                <div>
+                    <strong>외국인 수급 변화</strong>
+                    <p>코스피 방향성과 NAVER 수급을 함께 확인합니다.</p>
+                </div>
+                <span class="risk-chip normal-risk">관찰</span>
+            </div>
+        </section>
+
+        <section class="report-card">
+            <div class="report-section-title">
+                <div>
+                    <span>목표 경로</span>
+                    <h2>목표 달성 현황</h2>
+                </div>
+                <strong class="goal-percent">68%</strong>
+            </div>
+
+            <div class="goal-bar">
+                <span></span>
+            </div>
+
+            <div class="goal-stat-grid">
+                <div>
+                    <span>월 필요 증가액</span>
+                    <strong>약 50만 원</strong>
+                </div>
+                <div>
+                    <span>현재 전략</span>
+                    <strong>안정형</strong>
+                </div>
+                <div>
+                    <span>남은 기간</span>
+                    <strong>176일</strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="thpt-opinion">
+            <div class="opinion-face">•ᴗ•</div>
+            <div>
+                <span>THPT Opinion</span>
+                <h2>시장이 완전히 회복되지 않았습니다.</h2>
+                <p>
+                    오늘은 종목을 늘리기보다 기존 종목의 수급과
+                    현금 비중을 유지하는 편이 목표 달성에 더 적합합니다.
+                </p>
+            </div>
+        </section>
+
+        <section class="report-actions">
+            <button class="secondary-action" type="button">
+                이전 리포트
+            </button>
+            <button class="primary-action" type="button">
+                PDF 저장
+            </button>
+        </section>
+
+        <p class="disclaimer">
+            AI는 정보를 판단합니다. 투자 버튼은 본인의 판단입니다.
+        </p>
+
+    </main>
+
+    <nav>
+        <a href="index.html">
+            <b>⌂</b>
+            <span>홈</span>
+        </a>
+
+        <a href="portfolio.html">
+            <b>▣</b>
+            <span>자산</span>
+        </a>
+
+        <a class="active" href="report.html">
+            <b>☷</b>
+            <span>리포트</span>
+        </a>
+
+        <a href="score.html">
+            <b>◉</b>
+            <span>점수</span>
+        </a>
+
+        <a href="#">
+            <b>●</b>
+            <span>AI</span>
+        </a>
+    </nav>
+
+</div>
+</body>
+</html>

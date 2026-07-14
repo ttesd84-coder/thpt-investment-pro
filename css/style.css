@@ -1,39 +1,68 @@
-/* ==========================================================
+/* =========================================================
    THPT Investment Pro
-   Sprint 1 · Day 2 · Mission 4
-   Home UI Design System
-========================================================== */
+   Home UI v1
+========================================================= */
 
 
-/* ==========================================================
-   1. Reset
-========================================================== */
+/* =========================================================
+   1. Color System
+========================================================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+:root {
+    --purple: #7657f6;
+    --purple-dark: #5b3fd1;
+    --purple-soft: #f0ecff;
+
+    --green: #2ccb83;
+    --green-dark: #139a60;
+    --green-soft: #e9faf2;
+
+    --background: #f4f5fa;
+    --white: #ffffff;
+
+    --text: #1f2333;
+    --text-soft: #626a7c;
+    --muted: #979dae;
+
+    --line: #e9eaf0;
+    --red: #e85b63;
+
+    --shadow:
+        0 14px 36px
+        rgba(43, 34, 99, 0.08);
 }
 
-html{
-    scroll-behavior:smooth;
+
+/* =========================================================
+   2. Reset
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-body{
-    min-height:100vh;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    color: var(--text);
+
     background:
         radial-gradient(
             circle at top right,
-            rgba(124, 92, 255, 0.14),
+            rgba(118, 87, 246, 0.14),
             transparent 32%
         ),
         linear-gradient(
             180deg,
-            #F8F7FF 0%,
-            #F4F8F6 100%
+            #faf9ff 0%,
+            var(--background) 100%
         );
-
-    color:#222536;
 
     font-family:
         Pretendard,
@@ -43,816 +72,939 @@ body{
         "Segoe UI",
         sans-serif;
 
-    line-height:1.5;
-    overflow-x:hidden;
+    line-height: 1.5;
 }
 
-button,
-input,
-textarea,
-select{
-    font:inherit;
+button {
+    font: inherit;
 }
 
 
-/* ==========================================================
-   2. Color System
-========================================================== */
+/* =========================================================
+   3. Main Layout
+========================================================= */
 
-:root{
-    --purple:#7257F5;
-    --purple-dark:#5638D8;
-    --purple-soft:#EFEBFF;
+.app {
+    width: 100%;
+    max-width: 480px;
+    min-height: 100vh;
 
-    --green:#28C77A;
-    --green-dark:#119A59;
-    --green-soft:#E8F9F0;
-
-    --red:#F05252;
-    --red-soft:#FFF0F0;
-
-    --yellow:#F2B84B;
-    --yellow-soft:#FFF8E6;
-
-    --white:#FFFFFF;
-
-    --background:#F6F7FB;
-    --card:#FFFFFF;
-
-    --text:#222536;
-    --text-soft:#5D6375;
-    --gray:#9298A8;
-    --line:#E8EAF0;
-
-    --shadow:
-        0 14px 35px
-        rgba(52, 41, 115, 0.08);
-
-    --shadow-hover:
-        0 18px 42px
-        rgba(52, 41, 115, 0.13);
-
-    --radius-large:26px;
-    --radius-medium:20px;
-    --radius-small:14px;
-}
-
-
-/* ==========================================================
-   3. App Layout
-========================================================== */
-
-#app{
-    width:100%;
-    max-width:480px;
-    min-height:100vh;
-
-    margin:0 auto;
+    margin: 0 auto;
 
     padding:
         24px
-        18px
-        110px;
+        16px
+        105px;
 }
 
-#header{
-    margin-bottom:18px;
-}
-
-#main-content{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
-}
-
-#home{
-    display:flex;
-    flex-direction:column;
-    gap:18px;
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 
-/* ==========================================================
-   4. General Card
-========================================================== */
+/* =========================================================
+   4. Top Header
+========================================================= */
 
-.card{
-    position:relative;
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 
-    width:100%;
+    gap: 15px;
 
-    padding:21px;
+    margin-bottom: 18px;
+}
 
-    overflow:hidden;
+.top small,
+label {
+    color: var(--purple);
+
+    font-size: 12px;
+    font-weight: 850;
+}
+
+.top h1 {
+    font-size: 25px;
+    letter-spacing: -0.8px;
+}
+
+.top p {
+    color: var(--text-soft);
+
+    font-size: 13px;
+}
+
+.refresh {
+    width: 42px;
+    height: 42px;
+
+    color: var(--purple);
+    background: var(--white);
+
+    border: none;
+    border-radius: 15px;
+
+    box-shadow: var(--shadow);
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   5. Hero Card
+========================================================= */
+
+.hero {
+    position: relative;
+
+    display: flex;
+
+    min-height: 185px;
+
+    padding: 23px;
+
+    overflow: hidden;
+
+    color: var(--white);
 
     background:
         linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.98),
-            rgba(255, 255, 255, 0.88)
+            135deg,
+            #7354f5 0%,
+            #8b68ff 58%,
+            #37d092 150%
         );
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 42px
+        rgba(97, 70, 218, 0.25);
+}
+
+.hero span {
+    display: inline-flex;
+
+    padding: 5px 9px;
+
+    background:
+        rgba(255, 255, 255, 0.16);
+
+    border-radius: 999px;
+
+    font-size: 10px;
+    font-weight: 850;
+}
+
+.hero h2 {
+    margin-top: 14px;
+
+    font-size: 23px;
+    line-height: 1.38;
+    letter-spacing: -0.7px;
+}
+
+.hero p {
+    margin-top: 15px;
+
+    color:
+        rgba(255, 255, 255, 0.78);
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   6. THPT Character
+========================================================= */
+
+.bot {
+    position: absolute;
+
+    right: 18px;
+    bottom: 20px;
+
+    display: grid;
+    place-items: center;
+
+    width: 82px;
+    height: 82px;
+
+    color: var(--purple-dark);
+    background: var(--white);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 12px 24px
+        rgba(42, 30, 96, 0.18);
+}
+
+.bot b {
+    font-size: 17px;
+}
+
+.bot i {
+    position: absolute;
+
+    right: -4px;
+    top: -8px;
+
+    display: grid;
+    place-items: center;
+
+    width: 32px;
+    height: 32px;
+
+    color: var(--white);
+    background: var(--green);
+
+    border:
+        4px solid
+        var(--white);
+
+    border-radius: 13px;
+
+    font-style: normal;
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   7. Summary Grid
+========================================================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 13px;
+}
+
+
+/* =========================================================
+   8. General Cards
+========================================================= */
+
+.mini,
+.card {
+    background:
+        rgba(255, 255, 255, 0.95);
 
     border:
         1px solid
-        rgba(255, 255, 255, 0.85);
+        rgba(255, 255, 255, 0.9);
 
-    border-radius:var(--radius-large);
+    border-radius: 24px;
 
-    box-shadow:var(--shadow);
-
-    transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+    box-shadow: var(--shadow);
 }
 
-.card:hover{
-    transform:translateY(-2px);
-    box-shadow:var(--shadow-hover);
+.mini {
+    padding: 18px;
 }
 
-.card::after{
-    content:"";
-
-    position:absolute;
-
-    right:-45px;
-    bottom:-50px;
-
-    width:120px;
-    height:120px;
-
-    border-radius:50%;
-
-    background:
-        radial-gradient(
-            circle,
-            rgba(114, 87, 245, 0.08),
-            transparent 68%
-        );
-
-    pointer-events:none;
+.card {
+    padding: 20px;
 }
 
 
-/* ==========================================================
-   5. Two-column Row
-========================================================== */
+/* =========================================================
+   9. Market Score Card
+========================================================= */
 
-.row{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:14px;
-}
-
-.row .card{
-    min-width:0;
-    padding:19px;
-}
-
-
-/* ==========================================================
-   6. Typography
-========================================================== */
-
-.title{
-    margin-top:3px;
-
-    font-size:27px;
-    font-weight:850;
-    letter-spacing:-0.8px;
-}
-
-.subtitle{
-    color:var(--gray);
-
-    font-size:13px;
-    font-weight:600;
-    letter-spacing:-0.2px;
-}
-
-.card h1,
-.card h2,
-.card h3{
-    color:var(--text);
-    letter-spacing:-0.7px;
-}
-
-.card h2{
-    margin-top:5px;
-
-    font-size:20px;
-    line-height:1.35;
-    font-weight:800;
-}
-
-.card p{
-    position:relative;
-    z-index:1;
-}
-
-.card p + p{
-    margin-top:7px;
-}
-
-.score{
-    margin-top:8px;
-
-    color:var(--green);
-
-    font-size:44px;
-    line-height:1;
-    font-weight:900;
-    letter-spacing:-1.5px;
-}
-
-
-/* ==========================================================
-   7. Brand Card
-========================================================== */
-
-#home > .card:first-child{
-    min-height:176px;
-
-    padding:25px;
-
-    color:white;
-
-    background:
-        linear-gradient(
-            135deg,
-            #6F52F5 0%,
-            #805DFA 52%,
-            #2DC982 145%
-        );
-
-    border:none;
-
-    box-shadow:
-        0 18px 42px
-        rgba(103, 76, 225, 0.25);
-}
-
-#home > .card:first-child::before{
-    content:"THPT";
-
-    position:absolute;
-
-    top:17px;
-    right:18px;
-
-    color:rgba(255, 255, 255, 0.13);
-
-    font-size:52px;
-    font-weight:950;
-    letter-spacing:-4px;
-}
-
-#home > .card:first-child::after{
-    width:165px;
-    height:165px;
-
-    right:-38px;
-    bottom:-80px;
-
-    background:
-        rgba(46, 204, 113, 0.22);
-}
-
-#home > .card:first-child .title,
-#home > .card:first-child h1{
-    color:white;
-}
-
-#home > .card:first-child .subtitle{
-    color:rgba(255, 255, 255, 0.83);
-}
-
-#home > .card:first-child .subtitle:last-child{
-    margin-top:18px;
-
-    font-size:13px;
-    line-height:1.65;
-}
-
-
-/* ==========================================================
-   8. Market Score Card
-========================================================== */
-
-.row:first-of-type .card:first-child{
+.market {
     background:
         linear-gradient(
             145deg,
-            #FFFFFF,
-            #EDFFF5
+            #ffffff,
+            #edfff6
         );
 }
 
-.row:first-of-type .card:first-child::before{
-    content:"●";
+.market strong {
+    display: block;
 
-    position:absolute;
+    margin-top: 12px;
 
-    top:17px;
-    right:18px;
+    color: var(--green-dark);
 
-    color:var(--green);
-
-    font-size:14px;
-
-    animation:pulse 1.8s infinite;
+    font-size: 40px;
+    line-height: 1;
 }
 
-.row:first-of-type .card:first-child > p:last-child{
-    display:inline-flex;
+.market em {
+    display: inline-flex;
 
-    margin-top:12px;
-    padding:6px 10px;
+    margin-top: 10px;
+    padding: 5px 9px;
 
-    color:var(--green-dark);
+    color: var(--green-dark);
+    background: var(--green-soft);
 
-    background:var(--green-soft);
+    border-radius: 999px;
 
-    border-radius:999px;
-
-    font-size:12px;
-    font-weight:800;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 850;
 }
 
 
-/* ==========================================================
-   9. Total Asset Card
-========================================================== */
+/* =========================================================
+   10. Asset Card
+========================================================= */
 
-.row:first-of-type .card:last-child{
+.asset {
     background:
         linear-gradient(
             145deg,
-            #FFFFFF,
-            #F1EEFF
+            #ffffff,
+            #f2eeff
         );
 }
 
-.row:first-of-type .card:last-child h2{
-    margin-top:14px;
+.asset strong {
+    display: block;
 
-    color:var(--purple-dark);
+    margin-top: 18px;
 
-    font-size:19px;
+    color: var(--purple-dark);
+
+    font-size: 25px;
+    line-height: 1;
+}
+
+.asset em {
+    display: block;
+
+    margin-top: 10px;
+
+    color: var(--muted);
+
+    font-style: normal;
+    font-size: 11px;
 }
 
 
-/* ==========================================================
-   10. Buttons
-========================================================== */
+/* =========================================================
+   11. Card Headings
+========================================================= */
 
-button{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
+.head,
+.between {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 
-    min-height:44px;
+    gap: 12px;
+}
 
-    margin-top:16px;
-    padding:11px 16px;
+.head h3 {
+    margin-top: 4px;
 
-    color:white;
+    font-size: 19px;
+    letter-spacing: -0.5px;
+}
+
+.pill {
+    padding: 6px 10px;
+
+    color: var(--purple-dark);
+    background: var(--purple-soft);
+
+    border-radius: 999px;
+
+    font-size: 11px;
+    font-weight: 850;
+}
+
+
+/* =========================================================
+   12. Strategy Items
+========================================================= */
+
+.action {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 11px;
+    padding: 13px;
+
+    background: #f8f9fc;
+
+    border-radius: 17px;
+}
+
+.action > b {
+    display: grid;
+    place-items: center;
+
+    flex: none;
+
+    width: 34px;
+    height: 34px;
+
+    color: var(--green-dark);
+    background: var(--green-soft);
+
+    border-radius: 12px;
+}
+
+.action strong {
+    font-size: 14px;
+}
+
+.action p {
+    color: var(--text-soft);
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   13. Goal Progress
+========================================================= */
+
+.percent {
+    color: var(--green-dark);
+
+    font-size: 23px;
+}
+
+.track {
+    height: 13px;
+
+    margin-top: 18px;
+
+    overflow: hidden;
+
+    background: #eceef3;
+
+    border-radius: 999px;
+}
+
+.track span {
+    display: block;
+
+    width: 83.3%;
+    height: 100%;
 
     background:
         linear-gradient(
-            135deg,
+            90deg,
             var(--purple),
-            var(--purple-dark)
+            var(--green)
         );
 
-    border:none;
-    border-radius:var(--radius-small);
+    border-radius: inherit;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+.goalgrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 16px;
+}
+
+.goalgrid div {
+    padding: 12px;
+
+    background: #f8f9fc;
+
+    border-radius: 15px;
+}
+
+.goalgrid small,
+.goalgrid b {
+    display: block;
+}
+
+.goalgrid small {
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+.goalgrid b {
+    margin-top: 3px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   14. Range Buttons
+========================================================= */
+
+.range {
+    display: flex;
+
+    gap: 4px;
+
+    padding: 3px;
+
+    background: #f2f3f7;
+
+    border-radius: 11px;
+}
+
+.range button {
+    padding: 5px 7px;
+
+    color: var(--muted);
+    background: transparent;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+.range .on {
+    color: var(--purple-dark);
+    background: var(--white);
 
     box-shadow:
-        0 8px 18px
-        rgba(114, 87, 245, 0.22);
-
-    cursor:pointer;
-
-    font-size:14px;
-    font-weight:800;
-
-    transition:
-        transform 0.18s ease,
-        opacity 0.18s ease,
-        box-shadow 0.18s ease;
-}
-
-button:hover{
-    transform:translateY(-1px);
-
-    box-shadow:
-        0 11px 24px
-        rgba(114, 87, 245, 0.28);
-}
-
-button:active{
-    transform:scale(0.98);
-}
-
-button:focus-visible{
-    outline:
-        3px solid
-        rgba(114, 87, 245, 0.25);
-
-    outline-offset:3px;
+        0 3px 9px
+        rgba(32, 35, 51, 0.08);
 }
 
 
-/* ==========================================================
-   11. Daily Report Card
-========================================================== */
+/* =========================================================
+   15. Chart
+========================================================= */
 
-#home > .card:nth-of-type(2){
-    border-left:
-        5px solid
-        var(--purple);
+.chart {
+    width: 100%;
+
+    margin-top: 15px;
 }
 
-#home > .card:nth-of-type(2) h2{
-    max-width:330px;
-
-    font-size:21px;
+.area {
+    fill: url("#fill");
 }
 
+.line {
+    fill: none;
 
-/* ==========================================================
-   12. Chart Placeholder
-========================================================== */
+    stroke: var(--purple);
+    stroke-width: 4;
+    stroke-linecap: round;
+}
 
-#home > .card:nth-of-type(3) > div{
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.chart circle {
+    fill: var(--white);
 
-    min-height:150px;
+    stroke: var(--green);
+    stroke-width: 4;
+}
 
-    margin-top:16px;
+.up {
+    color: var(--green-dark);
+}
 
-    color:var(--purple);
-
-    background:
-        repeating-linear-gradient(
-            135deg,
-            #F5F2FF,
-            #F5F2FF 12px,
-            #FAF9FF 12px,
-            #FAF9FF 24px
-        );
-
-    border:
-        1px dashed
-        rgba(114, 87, 245, 0.35);
-
-    border-radius:18px;
-
-    font-size:14px;
-    font-weight:750;
+.down {
+    color: var(--red);
 }
 
 
-/* ==========================================================
-   13. Goal Card
-========================================================== */
+/* =========================================================
+   16. Index Rows
+========================================================= */
 
-#home > .card:nth-of-type(4){
-    background:
-        linear-gradient(
-            145deg,
-            #FFFFFF,
-            #F0FFF7
-        );
-}
+.index,
+.stock {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
-#home > .card:nth-of-type(4) h2{
-    margin-top:7px;
-
-    color:var(--green-dark);
-
-    font-size:31px;
-}
-
-
-/* ==========================================================
-   14. Index and Consultation Cards
-========================================================== */
-
-#home .row:nth-of-type(2) .card:first-child p:not(.subtitle){
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-
-    padding:10px 0;
+    padding: 13px 0;
 
     border-bottom:
         1px solid
         var(--line);
-
-    font-size:13px;
-    font-weight:750;
 }
 
-#home .row:nth-of-type(2) .card:first-child p:last-child{
-    border-bottom:none;
+.index:last-child,
+.stock:last-child {
+    border-bottom: none;
 }
 
-#home .row:nth-of-type(2) .card:last-child{
-    background:
-        linear-gradient(
-            145deg,
-            #FFFFFF,
-            #F2EEFF
-        );
+.index span,
+.stock span {
+    display: flex;
+    flex-direction: column;
+}
+
+.index small,
+.stock small {
+    color: var(--muted);
+
+    font-size: 10px;
 }
 
 
-/* ==========================================================
-   15. Portfolio and Recommendation Lists
-========================================================== */
+/* =========================================================
+   17. Text Link Buttons
+========================================================= */
 
-#home > .card:nth-last-of-type(3) > div,
-#home > .card:nth-last-of-type(2) > div{
-    margin-top:15px;
+.link {
+    color: var(--purple);
+    background: transparent;
+
+    border: none;
+
+    font-size: 11px;
+    font-weight: 850;
+
+    cursor: pointer;
 }
 
-#home > .card:nth-last-of-type(3) > div p,
-#home > .card:nth-last-of-type(2) > div p{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
 
-    min-height:47px;
+/* =========================================================
+   18. Stock Rows
+========================================================= */
 
-    padding:11px 13px;
+.stock {
+    gap: 11px;
+}
 
-    color:var(--text-soft);
+.stock i {
+    display: grid;
+    place-items: center;
 
-    background:#F8F9FC;
+    flex: none;
 
-    border:
+    width: 39px;
+    height: 39px;
+
+    color: var(--purple-dark);
+    background: var(--purple-soft);
+
+    border-radius: 14px;
+
+    font-style: normal;
+    font-weight: 900;
+}
+
+.stock span {
+    flex: 1;
+}
+
+.stock em {
+    text-align: right;
+
+    font-style: normal;
+}
+
+.stock em b,
+.stock em small {
+    display: block;
+}
+
+
+/* =========================================================
+   19. Recommendation Cards
+========================================================= */
+
+.recommend {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 12px;
+    padding: 13px;
+
+    background: #f8f9fc;
+
+    border-radius: 17px;
+}
+
+.recommend > b {
+    display: grid;
+    place-items: center;
+
+    flex: none;
+
+    width: 29px;
+    height: 29px;
+
+    color: var(--white);
+    background: var(--purple);
+
+    border-radius: 10px;
+
+    font-size: 11px;
+}
+
+.recommend span {
+    flex: 1;
+}
+
+.recommend span > * {
+    display: block;
+}
+
+.recommend strong {
+    font-size: 13px;
+}
+
+.recommend small {
+    color: var(--text-soft);
+
+    font-size: 10px;
+}
+
+.recommend em {
+    color: var(--purple-dark);
+
+    font-style: normal;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+
+/* =========================================================
+   20. Daily Report
+========================================================= */
+
+.report {
+    margin-top: 12px;
+
+    list-style: none;
+}
+
+.report li {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 12px;
+
+    padding: 12px 0;
+
+    border-bottom:
         1px solid
-        #EEF0F5;
-
-    border-radius:14px;
-
-    font-size:14px;
-    font-weight:700;
+        var(--line);
 }
 
-#home > .card:nth-last-of-type(2) > div p{
-    background:var(--purple-soft);
-    border-color:#E5DEFF;
+.report li:last-child {
+    border-bottom: none;
+}
+
+.report span {
+    color: var(--muted);
+
+    font-size: 11px;
+}
+
+.report b {
+    text-align: right;
+
+    font-size: 12px;
 }
 
 
-/* ==========================================================
-   16. THPT Comment Card
-========================================================== */
+/* =========================================================
+   21. AI Card
+========================================================= */
 
-#home > .card:last-child{
-    padding-left:78px;
+.ai {
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 18px;
+
+    color: var(--white);
 
     background:
         linear-gradient(
             135deg,
-            #7458F4,
-            #6649DD
+            #7557f5,
+            #5d43d7
         );
 
-    color:white;
+    border-radius: 24px;
 
-    border:none;
+    box-shadow:
+        0 18px 35px
+        rgba(83, 61, 195, 0.24);
 }
 
-#home > .card:last-child::before{
-    content:"•ᴗ•";
+.face {
+    display: grid;
+    place-items: center;
 
-    position:absolute;
+    flex: none;
 
-    top:50%;
-    left:20px;
+    width: 48px;
+    height: 48px;
 
-    transform:translateY(-50%);
+    color: var(--purple-dark);
+    background: var(--white);
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    border-radius: 16px;
 
-    width:44px;
-    height:44px;
-
-    color:var(--purple-dark);
-    background:white;
-
-    border-radius:15px;
-
-    font-size:16px;
-    font-weight:900;
+    font-weight: 900;
 }
 
-#home > .card:last-child h2{
-    color:white;
-
-    font-size:18px;
-    line-height:1.55;
+.ai > div:nth-child(2) {
+    flex: 1;
 }
 
-#home > .card:last-child .subtitle{
-    color:rgba(255, 255, 255, 0.73);
+.ai small {
+    color:
+        rgba(255, 255, 255, 0.72);
 }
 
-
-/* ==========================================================
-   Bottom Navigation Button
-========================================================== */
-
-#bottom-nav button{
-    flex:1;
-
-    min-height:52px;
-
-    margin:0;
-    padding:6px 4px;
-
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:3px;
-
-    color:var(--gray);
-    background:transparent;
-
-    border:none;
-    border-radius:15px;
-
-    box-shadow:none;
-
-    cursor:pointer;
-
-    transition:
-        color 0.2s ease,
-        background 0.2s ease,
-        transform 0.2s ease;
+.ai h3 {
+    font-size: 16px;
 }
 
-#bottom-nav button:hover{
-    transform:translateY(-1px);
-    box-shadow:none;
-}
+.ai button {
+    width: 38px;
+    height: 38px;
 
-#bottom-nav button:active{
-    transform:scale(0.97);
-}
+    color: var(--purple-dark);
+    background: var(--white);
 
-#bottom-nav button.active{
-    color:var(--purple);
-    background:var(--purple-soft);
+    border: none;
+    border-radius: 13px;
+
+    font-size: 18px;
+
+    cursor: pointer;
 }
 
 
-/* ==========================================================
-   Bottom Navigation Icon
-========================================================== */
+/* =========================================================
+   22. Bottom Navigation
+========================================================= */
 
-.nav-icon{
-    font-size:20px;
-    line-height:1;
+nav {
+    position: fixed;
+
+    left: 50%;
+    bottom: 0;
+
+    z-index: 20;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    width: min(480px, 100%);
+
+    padding:
+        7px
+        10px
+        calc(
+            7px +
+            env(safe-area-inset-bottom)
+        );
+
+    background:
+        rgba(255, 255, 255, 0.95);
+
+    border-top:
+        1px solid
+        var(--line);
+
+    box-shadow:
+        0 -10px 28px
+        rgba(31, 35, 51, 0.08);
+
+    backdrop-filter: blur(18px);
+
+    transform: translateX(-50%);
+}
+
+nav button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3px;
+
+    min-height: 54px;
+
+    color: var(--muted);
+    background: transparent;
+
+    border: none;
+    border-radius: 15px;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    cursor: pointer;
+}
+
+nav button.active {
+    color: var(--purple);
+    background: var(--purple-soft);
+}
+
+nav b {
+    font-size: 18px;
 }
 
 
-/* ==========================================================
-   Bottom Navigation Label
-========================================================== */
+/* =========================================================
+   23. Mobile Responsive
+========================================================= */
 
-.nav-label{
-    font-size:11px;
-    line-height:1.2;
-    font-weight:700;
-    letter-spacing:-0.2px;
-}
-#bottom-nav button:first-child{
-    color:var(--purple);
-    background:var(--purple-soft);
-}
+@media (max-width: 390px) {
 
-
-/* ==========================================================
-   18. Animations
-========================================================== */
-
-@keyframes pulse{
-    0%{
-        opacity:0.35;
-        transform:scale(0.8);
+    .app {
+        padding-left: 13px;
+        padding-right: 13px;
     }
 
-    50%{
-        opacity:1;
-        transform:scale(1.05);
+    .hero h2 {
+        font-size: 21px;
     }
 
-    100%{
-        opacity:0.35;
-        transform:scale(0.8);
-    }
-}
+    .bot {
+        right: 9px;
 
-@keyframes fadeUp{
-    from{
-        opacity:0;
-        transform:translateY(12px);
+        transform: scale(0.88);
+        transform-origin: right bottom;
     }
 
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-
-#home > *{
-    animation:
-        fadeUp
-        0.45s ease
-        both;
-}
-
-#home > *:nth-child(2){
-    animation-delay:0.04s;
-}
-
-#home > *:nth-child(3){
-    animation-delay:0.08s;
-}
-
-#home > *:nth-child(4){
-    animation-delay:0.12s;
-}
-
-#home > *:nth-child(5){
-    animation-delay:0.16s;
-}
-
-
-/* ==========================================================
-   19. Hidden Sections
-========================================================== */
-
-#portfolio,
-#report,
-#score,
-#chat{
-    display:none;
-}
-
-
-/* ==========================================================
-   20. Responsive
-========================================================== */
-
-@media (max-width:390px){
-
-    #app{
-        padding-left:14px;
-        padding-right:14px;
+    .grid {
+        gap: 10px;
     }
 
-    .row{
-        grid-template-columns:1fr;
+    .mini {
+        padding: 15px;
     }
 
-    .title{
-        font-size:24px;
+    .market strong {
+        font-size: 37px;
     }
 
-    .score{
-        font-size:40px;
-    }
-
-    .card{
-        padding:18px;
-        border-radius:22px;
-    }
-
-}
-
-@media (min-width:700px){
-
-    body{
-        padding:25px 0;
-    }
-
-    #app{
-        border-radius:30px;
-
-        box-shadow:
-            0 20px 65px
-            rgba(38, 29, 88, 0.1);
+    .asset strong {
+        font-size: 22px;
     }
 
 }

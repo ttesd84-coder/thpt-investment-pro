@@ -1,0 +1,775 @@
+/* =========================================================
+   THPT Investment Pro
+   Score UI
+========================================================= */
+
+.score-app {
+    padding-top: 24px;
+}
+
+.score-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 16px;
+
+    margin-bottom: 18px;
+}
+
+.score-header small {
+    color: var(--purple);
+
+    font-size: 12px;
+    font-weight: 850;
+}
+
+.score-header h1 {
+    margin-top: 2px;
+
+    font-size: 26px;
+    letter-spacing: -0.8px;
+}
+
+.score-header p {
+    margin-top: 4px;
+
+    color: var(--text-soft);
+
+    font-size: 12px;
+}
+
+.score-refresh {
+    display: grid;
+    place-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    color: var(--purple);
+    background: var(--white);
+
+    border: none;
+    border-radius: 15px;
+
+    box-shadow: var(--shadow);
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+.score-main {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+
+/* 대표 점수 */
+
+.score-hero {
+    display: grid;
+    grid-template-columns: 142px 1fr;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 21px;
+
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            135deg,
+            #7354f5,
+            #8b68ff 58%,
+            #38cf92 150%
+        );
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 42px
+        rgba(97, 70, 218, 0.25);
+}
+
+.score-circle {
+    display: grid;
+    place-items: center;
+
+    width: 136px;
+    height: 136px;
+
+    padding: 10px;
+
+    background:
+        conic-gradient(
+            var(--green) 0deg 194deg,
+            rgba(255, 255, 255, 0.18) 194deg 360deg
+        );
+
+    border-radius: 50%;
+}
+
+.score-circle-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border-radius: 50%;
+}
+
+.score-circle-inner span {
+    color: var(--muted);
+
+    font-size: 9px;
+    font-weight: 800;
+}
+
+.score-circle-inner strong {
+    color: var(--green-dark);
+
+    font-size: 45px;
+    line-height: 1;
+}
+
+.score-circle-inner em {
+    margin-top: 6px;
+    padding: 4px 8px;
+
+    color: var(--green-dark);
+    background: var(--green-soft);
+
+    border-radius: 999px;
+
+    font-style: normal;
+    font-size: 9px;
+    font-weight: 850;
+}
+
+.score-label {
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-size: 10px;
+    font-weight: 850;
+}
+
+.score-summary h2 {
+    margin-top: 5px;
+
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.score-summary p {
+    margin-top: 7px;
+
+    color:
+        rgba(255, 255, 255, 0.75);
+
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+.score-change {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 15px;
+}
+
+.score-change div {
+    padding: 8px 10px;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    border-radius: 12px;
+}
+
+.score-change span,
+.score-change strong {
+    display: block;
+}
+
+.score-change span {
+    color:
+        rgba(255, 255, 255, 0.66);
+
+    font-size: 8px;
+}
+
+.score-change strong {
+    font-size: 12px;
+}
+
+.score-change .score-arrow {
+    padding: 0;
+
+    background: transparent;
+
+    font-size: 16px;
+}
+
+
+/* 공통 카드 */
+
+.score-card {
+    padding: 20px;
+
+    background: var(--white);
+
+    border-radius: 24px;
+
+    box-shadow: var(--shadow);
+}
+
+.score-section-title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 14px;
+}
+
+.score-section-title span {
+    color: var(--purple);
+
+    font-size: 11px;
+    font-weight: 850;
+}
+
+.score-section-title h2 {
+    margin-top: 3px;
+
+    font-size: 19px;
+}
+
+
+/* 기간 버튼 */
+
+.score-range-buttons {
+    display: flex;
+
+    gap: 4px;
+
+    padding: 3px;
+
+    background: #f2f3f7;
+
+    border-radius: 11px;
+}
+
+.score-range-buttons button {
+    padding: 5px 8px;
+
+    color: var(--muted);
+    background: transparent;
+
+    border: none;
+    border-radius: 8px;
+
+    font-size: 9px;
+    font-weight: 850;
+
+    cursor: pointer;
+}
+
+.score-range-buttons button.active {
+    color: var(--purple-dark);
+    background: var(--white);
+
+    box-shadow:
+        0 3px 9px
+        rgba(32, 35, 51, 0.08);
+}
+
+
+/* 점수 차트 */
+
+.score-chart {
+    margin-top: 17px;
+}
+
+.score-chart svg {
+    display: block;
+
+    width: 100%;
+}
+
+.score-chart-area {
+    fill: url("#scoreFill");
+}
+
+.score-chart-line {
+    fill: none;
+
+    stroke: var(--purple);
+    stroke-width: 4;
+    stroke-linecap: round;
+}
+
+.score-chart circle {
+    fill: var(--white);
+
+    stroke: var(--green);
+    stroke-width: 4;
+}
+
+.score-history {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+
+    margin-top: 8px;
+}
+
+.score-history div {
+    padding: 10px;
+
+    text-align: center;
+
+    background: #f8f9fc;
+
+    border-radius: 13px;
+}
+
+.score-history span,
+.score-history strong {
+    display: block;
+}
+
+.score-history span {
+    color: var(--muted);
+
+    font-size: 8px;
+}
+
+.score-history strong {
+    margin-top: 2px;
+
+    font-size: 12px;
+}
+
+
+/* 점수 항목 */
+
+.factor-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 13px;
+}
+
+.factor-header > div {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+}
+
+.factor-icon {
+    display: grid;
+    place-items: center;
+
+    flex: none;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 15px;
+
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.usa-icon {
+    color: var(--purple-dark);
+    background: var(--purple-soft);
+}
+
+.trend-icon {
+    color: var(--green-dark);
+    background: var(--green-soft);
+
+    font-size: 18px;
+}
+
+.kospi-icon {
+    color: #167c72;
+    background: #e5f9f7;
+}
+
+.news-icon {
+    color: #b77700;
+    background: #fff5da;
+}
+
+.factor-header span {
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+.factor-header h2 {
+    margin-top: 2px;
+
+    font-size: 18px;
+}
+
+.factor-weight {
+    color: var(--purple-dark);
+
+    font-size: 13px;
+}
+
+.factor-progress {
+    height: 10px;
+
+    margin-top: 16px;
+
+    overflow: hidden;
+
+    background: #eceef3;
+
+    border-radius: 999px;
+}
+
+.factor-progress span {
+    display: block;
+
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--purple),
+            var(--green)
+        );
+
+    border-radius: inherit;
+}
+
+.factor-detail {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 7px;
+
+    margin-top: 13px;
+}
+
+.factor-detail div {
+    padding: 9px 6px;
+
+    text-align: center;
+
+    background: #f8f9fc;
+
+    border-radius: 12px;
+}
+
+.factor-detail span,
+.factor-detail strong {
+    display: block;
+}
+
+.factor-detail span {
+    color: var(--muted);
+
+    font-size: 8px;
+}
+
+.factor-detail strong {
+    margin-top: 2px;
+
+    font-size: 10px;
+}
+
+.positive-text {
+    color: var(--green-dark);
+}
+
+.negative-text {
+    color: var(--red);
+}
+
+.factor-comment {
+    margin-top: 12px;
+    padding: 11px;
+
+    color: var(--text-soft);
+    background: var(--purple-soft);
+
+    border-radius: 13px;
+
+    font-size: 10px;
+    line-height: 1.6;
+}
+
+
+/* 뉴스 */
+
+.news-list {
+    display: grid;
+
+    gap: 9px;
+
+    margin-top: 14px;
+}
+
+.news-item {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    padding: 11px;
+
+    background: #f8f9fc;
+
+    border-radius: 14px;
+}
+
+.news-status {
+    flex: none;
+
+    padding: 4px 7px;
+
+    border-radius: 999px;
+
+    font-size: 8px;
+    font-weight: 850;
+}
+
+.positive-news {
+    color: var(--green-dark);
+    background: var(--green-soft);
+}
+
+.caution-news {
+    color: #b77700;
+    background: #fff5da;
+}
+
+.news-item strong {
+    font-size: 11px;
+}
+
+.news-item p {
+    margin-top: 2px;
+
+    color: var(--text-soft);
+
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+
+/* 산정 사유 */
+
+.confidence-chip {
+    padding: 6px 9px;
+
+    color: var(--green-dark) !important;
+    background: var(--green-soft);
+
+    border-radius: 999px;
+
+    font-size: 9px !important;
+}
+
+.reason-list {
+    display: grid;
+
+    gap: 9px;
+
+    margin-top: 15px;
+
+    list-style: none;
+}
+
+.reason-list li {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 11px;
+
+    background: #f8f9fc;
+
+    border-radius: 13px;
+}
+
+.reason-plus {
+    display: grid;
+    place-items: center;
+
+    flex: none;
+
+    width: 38px;
+    height: 30px;
+
+    color: var(--green-dark);
+    background: var(--green-soft);
+
+    border-radius: 10px;
+
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.reason-list p {
+    font-size: 11px;
+    font-weight: 750;
+}
+
+
+/* 최종 결론 */
+
+.score-conclusion {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 20px;
+
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            135deg,
+            #7557f5,
+            #5d43d7
+        );
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 18px 35px
+        rgba(83, 61, 195, 0.24);
+}
+
+.score-conclusion-icon {
+    display: grid;
+    place-items: center;
+
+    flex: none;
+
+    width: 52px;
+    height: 52px;
+
+    color: var(--purple-dark);
+    background: var(--white);
+
+    border-radius: 17px;
+
+    font-weight: 900;
+}
+
+.score-conclusion span {
+    color:
+        rgba(255, 255, 255, 0.7);
+
+    font-size: 9px;
+    font-weight: 850;
+}
+
+.score-conclusion h2 {
+    margin-top: 3px;
+
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+.score-conclusion p {
+    margin-top: 5px;
+
+    color:
+        rgba(255, 255, 255, 0.72);
+
+    font-size: 9px;
+    line-height: 1.55;
+}
+
+
+/* 하단 메뉴 */
+
+nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3px;
+
+    min-height: 54px;
+
+    color: var(--muted);
+    background: transparent;
+
+    border-radius: 15px;
+
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+nav a.active {
+    color: var(--purple);
+    background: var(--purple-soft);
+}
+
+nav a b {
+    font-size: 18px;
+}
+
+
+/* 모바일 */
+
+@media (max-width: 390px) {
+
+    .score-hero {
+        grid-template-columns: 120px 1fr;
+
+        gap: 13px;
+
+        padding: 17px;
+    }
+
+    .score-circle {
+        width: 116px;
+        height: 116px;
+    }
+
+    .score-circle-inner strong {
+        font-size: 39px;
+    }
+
+    .score-summary h2 {
+        font-size: 17px;
+    }
+
+    .factor-detail {
+        gap: 5px;
+    }
+
+}

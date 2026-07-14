@@ -1,0 +1,655 @@
+/* =========================================================
+   THPT Investment Pro
+   Portfolio UI
+========================================================= */
+
+.portfolio-app {
+    padding-top: 24px;
+}
+
+.portfolio-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 16px;
+
+    margin-bottom: 18px;
+}
+
+.portfolio-header small {
+    color: var(--purple);
+
+    font-size: 12px;
+    font-weight: 850;
+}
+
+.portfolio-header h1 {
+    margin-top: 2px;
+
+    font-size: 26px;
+    letter-spacing: -0.8px;
+}
+
+.portfolio-header p {
+    margin-top: 4px;
+
+    color: var(--text-soft);
+
+    font-size: 12px;
+}
+
+.edit-button {
+    padding: 9px 14px;
+
+    color: var(--purple-dark);
+    background: var(--purple-soft);
+
+    border: none;
+    border-radius: 13px;
+
+    font-size: 12px;
+    font-weight: 850;
+
+    cursor: pointer;
+}
+
+.portfolio-main {
+    display: flex;
+    flex-direction: column;
+
+    gap: 16px;
+}
+
+
+/* 총자산 */
+
+.portfolio-summary {
+    padding: 22px;
+
+    color: var(--white);
+
+    background:
+        linear-gradient(
+            135deg,
+            #7354f5,
+            #8b68ff 62%,
+            #38cf92 155%
+        );
+
+    border-radius: 27px;
+
+    box-shadow:
+        0 19px 40px
+        rgba(97, 70, 218, 0.24);
+}
+
+.summary-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+}
+
+.summary-top span {
+    color:
+        rgba(255, 255, 255, 0.74);
+
+    font-size: 11px;
+}
+
+.summary-top strong {
+    display: block;
+
+    margin-top: 6px;
+
+    font-size: 29px;
+    letter-spacing: -1px;
+}
+
+.profit-chip {
+    padding: 6px 10px;
+
+    color: var(--white) !important;
+    background:
+        rgba(255, 255, 255, 0.16);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.16);
+
+    border-radius: 999px;
+
+    font-weight: 850;
+}
+
+.asset-breakdown {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 22px;
+}
+
+.asset-breakdown div {
+    padding: 12px;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.13);
+
+    border-radius: 15px;
+}
+
+.asset-breakdown span,
+.asset-breakdown strong {
+    display: block;
+}
+
+.asset-breakdown span {
+    color:
+        rgba(255, 255, 255, 0.7);
+
+    font-size: 10px;
+}
+
+.asset-breakdown strong {
+    margin-top: 3px;
+
+    font-size: 14px;
+}
+
+
+/* 현재 전략 */
+
+.strategy-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    padding: 20px;
+
+    background: var(--white);
+
+    border-radius: 23px;
+
+    box-shadow: var(--shadow);
+}
+
+.portfolio-label {
+    color: var(--purple);
+
+    font-size: 11px;
+    font-weight: 850;
+}
+
+.strategy-summary h2 {
+    margin-top: 3px;
+
+    font-size: 20px;
+}
+
+.strategy-summary p {
+    max-width: 290px;
+
+    margin-top: 5px;
+
+    color: var(--text-soft);
+
+    font-size: 11px;
+}
+
+.info-button {
+    display: grid;
+    place-items: center;
+
+    flex: none;
+
+    width: 38px;
+    height: 38px;
+
+    color: var(--purple-dark);
+    background: var(--purple-soft);
+
+    border: none;
+    border-radius: 13px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+}
+
+
+/* 현금 비중 */
+
+.cash-ratio-card,
+.portfolio-card {
+    padding: 20px;
+
+    background: var(--white);
+
+    border-radius: 24px;
+
+    box-shadow: var(--shadow);
+}
+
+.portfolio-section-title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 14px;
+}
+
+.portfolio-section-title span {
+    color: var(--purple);
+
+    font-size: 11px;
+    font-weight: 850;
+}
+
+.portfolio-section-title h2 {
+    margin-top: 3px;
+
+    font-size: 20px;
+}
+
+.portfolio-section-title > strong {
+    color: var(--green-dark);
+
+    font-size: 13px;
+}
+
+.cash-progress {
+    height: 12px;
+
+    margin-top: 17px;
+
+    overflow: hidden;
+
+    background: #eceef3;
+
+    border-radius: 999px;
+}
+
+.cash-progress span {
+    display: block;
+
+    width: 33.1%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--purple),
+            var(--green)
+        );
+
+    border-radius: inherit;
+}
+
+.cash-ratio-card > p {
+    margin-top: 9px;
+
+    color: var(--text-soft);
+
+    font-size: 10px;
+}
+
+
+/* 정렬 버튼 */
+
+.sort-button {
+    padding: 7px 10px;
+
+    color: var(--purple-dark);
+    background: var(--purple-soft);
+
+    border: none;
+    border-radius: 11px;
+
+    font-size: 10px;
+    font-weight: 850;
+
+    cursor: pointer;
+}
+
+
+/* 보유 종목 */
+
+.holding-card {
+    margin-top: 14px;
+    padding: 16px;
+
+    background: #f8f9fc;
+
+    border:
+        1px solid
+        #eef0f4;
+
+    border-radius: 19px;
+}
+
+.holding-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+.holding-identity {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+}
+
+.holding-logo {
+    display: grid;
+    place-items: center;
+
+    flex: none;
+
+    width: 42px;
+    height: 42px;
+
+    border-radius: 15px;
+
+    font-weight: 900;
+}
+
+.holding-logo.naver {
+    color: var(--purple-dark);
+    background: var(--purple-soft);
+}
+
+.holding-logo.samsung {
+    color: var(--green-dark);
+    background: var(--green-soft);
+}
+
+.holding-logo.etf {
+    color: #167c72;
+    background: #e5f9f7;
+}
+
+.holding-identity h3 {
+    font-size: 14px;
+}
+
+.holding-identity p {
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+.holding-score {
+    text-align: right;
+}
+
+.holding-score strong,
+.holding-score span {
+    display: block;
+}
+
+.holding-score strong {
+    font-size: 16px;
+}
+
+.holding-score span {
+    color: var(--muted);
+
+    font-size: 9px;
+}
+
+.positive-score strong {
+    color: var(--green-dark);
+}
+
+.neutral-score strong {
+    color: var(--purple-dark);
+
+    font-size: 12px;
+}
+
+.etf-score strong {
+    color: #167c72;
+}
+
+.holding-numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 7px;
+
+    margin-top: 14px;
+}
+
+.holding-numbers div {
+    padding: 9px;
+
+    background: var(--white);
+
+    border-radius: 12px;
+}
+
+.holding-numbers span,
+.holding-numbers strong {
+    display: block;
+}
+
+.holding-numbers span {
+    color: var(--muted);
+
+    font-size: 8px;
+}
+
+.holding-numbers strong {
+    margin-top: 3px;
+
+    font-size: 10px;
+}
+
+.positive-text {
+    color: var(--green-dark);
+}
+
+.holding-opinion {
+    margin-top: 11px;
+    padding: 11px;
+
+    background: var(--purple-soft);
+
+    border-radius: 13px;
+}
+
+.holding-opinion span {
+    color: var(--purple-dark);
+
+    font-size: 9px;
+    font-weight: 850;
+}
+
+.holding-opinion p {
+    margin-top: 3px;
+
+    color: var(--text-soft);
+
+    font-size: 10px;
+    line-height: 1.55;
+}
+
+.detail-button {
+    width: 100%;
+
+    margin-top: 11px;
+    padding: 10px;
+
+    color: var(--purple-dark);
+    background: var(--white);
+
+    border:
+        1px solid
+        #e5deff;
+
+    border-radius: 12px;
+
+    font-size: 10px;
+    font-weight: 850;
+
+    cursor: pointer;
+}
+
+
+/* 추천 종목 */
+
+.candidate-card {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    margin-top: 12px;
+    padding: 13px;
+
+    background: #f8f9fc;
+
+    border-radius: 17px;
+}
+
+.candidate-rank {
+    display: grid;
+    place-items: center;
+
+    flex: none;
+
+    width: 30px;
+    height: 30px;
+
+    color: var(--white);
+    background: var(--purple);
+
+    border-radius: 10px;
+
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.candidate-rank.second {
+    color: var(--green-dark);
+    background: var(--green-soft);
+}
+
+.candidate-rank.third {
+    color: #b77700;
+    background: #fff5da;
+}
+
+.candidate-content {
+    flex: 1;
+}
+
+.candidate-content h3 {
+    font-size: 13px;
+}
+
+.candidate-content p {
+    margin-top: 2px;
+
+    color: var(--text-soft);
+
+    font-size: 9px;
+    line-height: 1.5;
+}
+
+.candidate-result {
+    text-align: right;
+}
+
+.candidate-result strong,
+.candidate-result span {
+    display: block;
+}
+
+.candidate-result strong {
+    color: var(--purple-dark);
+
+    font-size: 19px;
+}
+
+.candidate-result span {
+    color: var(--green-dark);
+
+    font-size: 9px;
+    font-weight: 850;
+}
+
+.candidate-result.wait strong,
+.candidate-result.wait span {
+    color: #b77700;
+}
+
+.candidate-result.observe strong,
+.candidate-result.observe span {
+    color: var(--muted);
+}
+
+
+/* 하단 메뉴 링크 */
+
+nav a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3px;
+
+    min-height: 54px;
+
+    color: var(--muted);
+    background: transparent;
+
+    border-radius: 15px;
+
+    text-decoration: none;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+nav a.active {
+    color: var(--purple);
+    background: var(--purple-soft);
+}
+
+nav a b {
+    font-size: 18px;
+}
+
+
+/* 모바일 */
+
+@media (max-width: 390px) {
+
+    .asset-breakdown {
+        gap: 7px;
+    }
+
+    .holding-numbers {
+        gap: 5px;
+    }
+
+    .holding-numbers div {
+        padding: 8px 6px;
+    }
+
+}

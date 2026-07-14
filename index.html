@@ -1,71 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>THPT Investment Pro</title>
-
-    <link rel="stylesheet" href="css/style.css">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>THPT Investment Pro</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+<div class="app">
+  <header class="top">
+    <div><small>THPT Investment Pro</small><h1>안녕하세요, 태화님.</h1><p>목표까지 176일 남았습니다.</p></div>
+    <button class="refresh">↻</button>
+  </header>
 
-    <div id="app">
+  <main>
+    <section class="hero">
+      <div><span>THPT DAILY</span><h2>오늘은 현금을 지키며<br>좋은 자리만 기다려요.</h2><p>AI는 정보를 판단합니다.<br>투자 버튼은 본인의 판단입니다.</p></div>
+      <div class="bot"><b>•ᴗ•</b><i>↗</i></div>
+    </section>
 
-        <!-- Header -->
-        <header id="header">
+    <section class="grid">
+      <article class="mini market"><label>Market Score</label><strong>54</strong><em>현금 유지</em></article>
+      <article class="mini asset"><label>총 자산</label><strong>833만</strong><em>₩8,334,614</em></article>
+    </section>
 
-        </header>
+    <section class="card">
+      <div class="head"><div><label>오늘의 전략</label><h3>관망 중심 · 추가매수 대기</h3></div><span class="pill">안정형</span></div>
+      <div class="action"><b>✓</b><div><strong>NAVER 3주 보유</strong><p>추가매수 없이 수급을 확인합니다.</p></div></div>
+      <div class="action"><b>―</b><div><strong>현금 276만 원 유지</strong><p>다음 진입 기회를 위해 남겨둡니다.</p></div></div>
+    </section>
 
-        <!-- Main -->
-        <main id="main-content">
+    <section class="card">
+      <div class="head"><div><label>목표 달성</label><h3>1,000만 원을 향해</h3></div><strong class="percent">83.3%</strong></div>
+      <div class="track"><span></span></div>
+      <div class="between muted"><small>현재 833만 원</small><small>남은 금액 167만 원</small></div>
+      <div class="goalgrid">
+        <div><small>월 필요 증가액</small><b>약 50만 원</b></div>
+        <div><small>달성 가능성</small><b>68%</b></div>
+      </div>
+    </section>
 
-            <section id="home">
+    <section class="card">
+      <div class="head"><div><label>투자 수익률</label><h3>최근 자산 흐름</h3></div><div class="range"><button class="on">1M</button><button>3M</button><button>1Y</button></div></div>
+      <svg class="chart" viewBox="0 0 360 145">
+        <defs><linearGradient id="fill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7657f6" stop-opacity=".25"/><stop offset="1" stop-color="#7657f6" stop-opacity="0"/></linearGradient></defs>
+        <path class="area" d="M10 115 C55 105 75 123 110 93 C140 70 165 94 198 69 C230 48 250 70 283 43 C312 24 333 42 350 24 L350 140 L10 140Z"/>
+        <path class="line" d="M10 115 C55 105 75 123 110 93 C140 70 165 94 198 69 C230 48 250 70 283 43 C312 24 333 42 350 24"/>
+        <circle cx="350" cy="24" r="5"/>
+      </svg>
+      <div class="between muted"><small>최근 한 달</small><b class="up">+3.2%</b></div>
+    </section>
 
-            </section>
+    <section class="card">
+      <div class="head"><div><label>오늘 주요 지수</label><h3>시장 현황</h3></div><small class="muted">10:30 기준</small></div>
+      <div class="index"><span><b>S&amp;P 500</b><small>SPY</small></span><strong class="up">+0.84%</strong></div>
+      <div class="index"><span><b>NASDAQ 100</b><small>QQQ</small></span><strong class="up">+1.12%</strong></div>
+      <div class="index"><span><b>USD / KRW</b><small>환율</small></span><strong class="down">-0.25%</strong></div>
+    </section>
 
-            <section id="portfolio">
+    <section class="card">
+      <div class="head"><div><label>현재 보유 종목</label><h3>내 포트폴리오</h3></div><button class="link">전체보기</button></div>
+      <div class="stock"><i>N</i><span><b>NAVER</b><small>3주 · 보유</small></span><em><b class="up">84점</b><small>분할매수</small></em></div>
+      <div class="stock"><i>S</i><span><b>삼성전자</b><small>25주 · 락업</small></span><em><b>코어</b><small>유지</small></em></div>
+      <div class="stock"><i>E</i><span><b>미국 S&amp;P500(H)</b><small>21주 · 적립</small></span><em><b>ETF</b><small>유지</small></em></div>
+    </section>
 
-            </section>
+    <section class="card">
+      <div class="head"><div><label>오늘의 관심 대상</label><h3>추천 종목</h3></div><button class="link">분석보기</button></div>
+      <div class="recommend"><b>1</b><span><strong>NAVER</strong><small>기관·외국인 수급과 조정 구간이 긍정적입니다.</small></span><em>84</em></div>
+      <div class="recommend"><b>2</b><span><strong>두산에너빌리티</strong><small>7만 원 지지 여부를 먼저 확인합니다.</small></span><em>77</em></div>
+    </section>
 
-            <section id="report">
+    <section class="card">
+      <div class="head"><div><label>Daily Report</label><h3>오늘의 한 줄 요약</h3></div><small class="muted">7월 14일</small></div>
+      <ul class="report"><li><span>시장</span><b>54점 · 현금 유지</b></li><li><span>보유</span><b>NAVER 추가매수 대기</b></li><li><span>ETF</span><b>오늘 적립 없음</b></li><li><span>전략</span><b>좋은 자리만 기다리기</b></li></ul>
+    </section>
 
-            </section>
+    <section class="ai">
+      <div class="face">•ᴗ•</div><div><small>THPT 한마디</small><h3>오늘은 쉬는 것도 투자입니다.<br>현금을 지키세요.</h3></div><button>→</button>
+    </section>
+  </main>
 
-            <section id="score">
-
-            </section>
-
-            <section id="chat">
-
-            </section>
-
-        </main>
-
-        <!-- Bottom Navigation -->
-        <nav id="bottom-nav">
-
-        </nav>
-
-    </div>
-
-    <script src="js/app.js"></script>
-
-    <script src="js/home.js"></script>
-
-    <script src="js/portfolio.js"></script>
-
-    <script src="js/report.js"></script>
-
-    <script src="js/score.js"></script>
-
-    <script src="js/chat.js"></script>
-
+  <nav>
+    <button class="active"><b>⌂</b><span>홈</span></button>
+    <button><b>▣</b><span>자산</span></button>
+    <button><b>☷</b><span>리포트</span></button>
+    <button><b>◉</b><span>점수</span></button>
+    <button><b>●</b><span>AI</span></button>
+  </nav>
+</div>
 </body>
-
 </html>

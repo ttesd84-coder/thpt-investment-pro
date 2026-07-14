@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>시장 점수 | THPT Investment Pro</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/score.css">
+</head>
+
+<body>
+
+<div class="app score-app">
+
+    <header class="score-header">
+
+        <div>
+            <small>THPT Investment Pro</small>
+            <h1>시장 점수</h1>
+            <p>오늘 시장을 구성하는 근거를 확인합니다.</p>
+        </div>
+
+        <button class="score-refresh" type="button">
+            ↻
+        </button>
+
+    </header>
+
+
+    <main class="score-main">
+
+        <!-- 대표 시장 점수 -->
+
+        <section class="score-hero">
+
+            <div class="score-circle">
+
+                <div class="score-circle-inner">
+                    <span>Market Score</span>
+                    <strong>54</strong>
+                    <em>관망</em>
+                </div>
+
+            </div>
+
+
+            <div class="score-summary">
+
+                <span class="score-label">
+                    오늘 시장
+                </span>
+
+                <h2>현금 유지가 우선입니다.</h2>
+
+                <p>
+                    미국 기술주 흐름은 양호하지만,
+                    코스피와 최근 변동성은 아직 불안정합니다.
+                </p>
+
+
+                <div class="score-change">
+
+                    <div>
+                        <span>어제</span>
+                        <strong>51점</strong>
+                    </div>
+
+                    <div class="score-arrow">
+                        →
+                    </div>
+
+                    <div>
+                        <span>오늘</span>
+                        <strong class="positive-text">54점</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 점수 추세 -->
+
+        <section class="score-card">
+
+            <div class="score-section-title">
+
+                <div>
+                    <span>최근 점수 추세</span>
+                    <h2>시장이 조금씩 회복 중입니다.</h2>
+                </div>
+
+                <div class="score-range-buttons">
+                    <button class="active" type="button">2주</button>
+                    <button type="button">1개월</button>
+                </div>
+
+            </div>
+
+
+            <div class="score-chart">
+
+                <svg
+                    viewBox="0 0 360 160"
+                    role="img"
+                    aria-label="최근 시장 점수 그래프"
+                >
+
+                    <defs>
+
+                        <linearGradient
+                            id="scoreFill"
+                            x1="0"
+                            y1="0"
+                            x2="0"
+                            y2="1"
+                        >
+
+                            <stop
+                                offset="0%"
+                                stop-color="#7657f6"
+                                stop-opacity="0.28"
+                            />
+
+                            <stop
+                                offset="100%"
+                                stop-color="#7657f6"
+                                stop-opacity="0"
+                            />
+
+                        </linearGradient>
+
+                    </defs>
+
+
+                    <path
+                        class="score-chart-area"
+                        d="
+                            M10 125
+                            C45 120 60 130 87 112
+                            C113 94 132 106 156 91
+                            C180 76 199 89 223 72
+                            C248 54 267 68 292 49
+                            C316 31 334 45 350 34
+                            L350 150
+                            L10 150
+                            Z
+                        "
+                    />
+
+
+                    <path
+                        class="score-chart-line"
+                        d="
+                            M10 125
+                            C45 120 60 130 87 112
+                            C113 94 132 106 156 91
+                            C180 76 199 89 223 72
+                            C248 54 267 68 292 49
+                            C316 31 334 45 350 34
+                        "
+                    />
+
+
+                    <circle
+                        cx="350"
+                        cy="34"
+                        r="5"
+                    />
+
+                </svg>
+
+            </div>
+
+
+            <div class="score-history">
+
+                <div>
+                    <span>2주 평균</span>
+                    <strong>49점</strong>
+                </div>
+
+                <div>
+                    <span>1개월 평균</span>
+                    <strong>47점</strong>
+                </div>
+
+                <div>
+                    <span>현재</span>
+                    <strong class="positive-text">54점</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 미국 시장 -->
+
+        <section class="score-card">
+
+            <div class="factor-header">
+
+                <div>
+                    <span class="factor-icon usa-icon">
+                        US
+                    </span>
+
+                    <div>
+                        <span>전일 미국장 흐름</span>
+                        <h2>22 / 40점</h2>
+                    </div>
+                </div>
+
+                <strong class="factor-weight">
+                    40%
+                </strong>
+
+            </div>
+
+
+            <div class="factor-progress">
+                <span style="width:55%"></span>
+            </div>
+
+
+            <div class="factor-detail">
+
+                <div>
+                    <span>S&amp;P 500</span>
+                    <strong class="positive-text">+0.84%</strong>
+                </div>
+
+                <div>
+                    <span>NASDAQ 100</span>
+                    <strong class="positive-text">+1.12%</strong>
+                </div>
+
+                <div>
+                    <span>반도체 ETF</span>
+                    <strong class="negative-text">-0.35%</strong>
+                </div>
+
+            </div>
+
+
+            <p class="factor-comment">
+                미국 기술주 상승은 긍정적이지만
+                반도체 흐름이 약해 만점을 부여하지 않았습니다.
+            </p>
+
+        </section>
+
+
+        <!-- 변동성 추세 -->
+
+        <section class="score-card">
+
+            <div class="factor-header">
+
+                <div>
+                    <span class="factor-icon trend-icon">
+                        ↗
+                    </span>
+
+                    <div>
+                        <span>변동성·최근 추세</span>
+                        <h2>14 / 30점</h2>
+                    </div>
+                </div>
+
+                <strong class="factor-weight">
+                    30%
+                </strong>
+
+            </div>
+
+
+            <div class="factor-progress">
+                <span style="width:46.6%"></span>
+            </div>
+
+
+            <div class="factor-detail">
+
+                <div>
+                    <span>최근 2주</span>
+                    <strong>보합</strong>
+                </div>
+
+                <div>
+                    <span>최근 1개월</span>
+                    <strong class="negative-text">약세</strong>
+                </div>
+
+                <div>
+                    <span>거래량</span>
+                    <strong>평균</strong>
+                </div>
+
+            </div>
+
+
+            <p class="factor-comment">
+                지수 반등은 나타났지만
+                한 달 기준 하락 추세가 완전히 해소되지는 않았습니다.
+            </p>
+
+        </section>
+
+
+        <!-- 코스피 -->
+
+        <section class="score-card">
+
+            <div class="factor-header">
+
+                <div>
+                    <span class="factor-icon kospi-icon">
+                        K
+                    </span>
+
+                    <div>
+                        <span>코스피 흐름</span>
+                        <h2>10 / 20점</h2>
+                    </div>
+                </div>
+
+                <strong class="factor-weight">
+                    20%
+                </strong>
+
+            </div>
+
+
+            <div class="factor-progress">
+                <span style="width:50%"></span>
+            </div>
+
+
+            <div class="factor-detail">
+
+                <div>
+                    <span>현재 지수</span>
+                    <strong>6,773.24</strong>
+                </div>
+
+                <div>
+                    <span>등락률</span>
+                    <strong class="negative-text">-0.49%</strong>
+                </div>
+
+                <div>
+                    <span>장중 기준</span>
+                    <strong>11시 이후</strong>
+                </div>
+
+            </div>
+
+
+            <p class="factor-comment">
+                장 초반 변동성을 제외하고
+                11시 이후 코스피 방향성을 반영했습니다.
+            </p>
+
+        </section>
+
+
+        <!-- 뉴스 -->
+
+        <section class="score-card">
+
+            <div class="factor-header">
+
+                <div>
+                    <span class="factor-icon news-icon">
+                        N
+                    </span>
+
+                    <div>
+                        <span>뉴스·주요 일정</span>
+                        <h2>8 / 10점</h2>
+                    </div>
+                </div>
+
+                <strong class="factor-weight">
+                    10%
+                </strong>
+
+            </div>
+
+
+            <div class="factor-progress">
+                <span style="width:80%"></span>
+            </div>
+
+
+            <div class="news-list">
+
+                <article class="news-item">
+
+                    <span class="news-status positive-news">
+                        긍정
+                    </span>
+
+                    <div>
+                        <strong>미국 기술주 실적 기대감</strong>
+                        <p>대형 기술주의 실적 전망이 시장 심리를 지지합니다.</p>
+                    </div>
+
+                </article>
+
+
+                <article class="news-item">
+
+                    <span class="news-status caution-news">
+                        주의
+                    </span>
+
+                    <div>
+                        <strong>지정학적 리스크 지속</strong>
+                        <p>장중 급변 가능성이 있어 비중 확대는 신중해야 합니다.</p>
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- 점수 산정 사유 -->
+
+        <section class="score-card reason-card">
+
+            <div class="score-section-title">
+
+                <div>
+                    <span>점수 산정 사유</span>
+                    <h2>왜 54점인가요?</h2>
+                </div>
+
+                <span class="confidence-chip">
+                    신뢰도 78%
+                </span>
+
+            </div>
+
+
+            <ul class="reason-list">
+
+                <li>
+                    <span class="reason-plus">+22</span>
+                    <p>전일 미국 기술주 상승</p>
+                </li>
+
+                <li>
+                    <span class="reason-plus">+14</span>
+                    <p>최근 2주 반등 흐름</p>
+                </li>
+
+                <li>
+                    <span class="reason-plus">+10</span>
+                    <p>11시 이후 코스피 흐름</p>
+                </li>
+
+                <li>
+                    <span class="reason-plus">+8</span>
+                    <p>긍정 뉴스와 일정 반영</p>
+                </li>
+
+            </ul>
+
+        </section>
+
+
+        <!-- 오늘 전략 -->
+
+        <section class="score-conclusion">
+
+            <div class="score-conclusion-icon">
+                •ᴗ•
+            </div>
+
+            <div>
+                <span>THPT 결론</span>
+
+                <h2>
+                    시장점수 54점으로<br>
+                    신규매수보다 현금 유지가 우선입니다.
+                </h2>
+
+                <p>
+                    시장이 회복되더라도
+                    점수 60점 이상 확인 후 분할매수를 검토합니다.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <nav>
+
+        <a href="index.html">
+            <b>⌂</b>
+            <span>홈</span>
+        </a>
+
+        <a href="portfolio.html">
+            <b>▣</b>
+            <span>자산</span>
+        </a>
+
+        <a href="#">
+            <b>☷</b>
+            <span>리포트</span>
+        </a>
+
+        <a class="active" href="score.html">
+            <b>◉</b>
+            <span>점수</span>
+        </a>
+
+        <a href="#">
+            <b>●</b>
+            <span>AI</span>
+        </a>
+
+    </nav>
+
+</div>
+
+</body>
+</html>
