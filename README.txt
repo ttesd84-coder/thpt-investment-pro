@@ -1,3 +1,4 @@
+THPT Investment Pro는 AI가 투자 결정을 대신하는 앱이 아니라, 투자자가 더 나은 결정을 내릴 수 있도록 돕는 AI 투자 비서입니다.
 HF Decision v0.4 — Twelve Data 연결판
 
 포함 파일
